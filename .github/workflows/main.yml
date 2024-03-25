@@ -12,13 +12,13 @@ jobs:
     steps:
       - name: Deploy using ssh
         uses: appleboy/ssh-action@main
-          with:
-            host: ${{ secrets.HOST }}
-            username: ${{ secrets.USERNAME }}
-            key: ${{ secrets.SSHKEY }}
-            port: ${{ secrets.PORT }}
-            script: |
-              cd /www/family-site-reactjs
-              git pull origin main
-              npm install --only=prod
-              npm build
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /www/family-site-reactjs
+            git pull origin main
+            npm install --only=prod
+            npm build
