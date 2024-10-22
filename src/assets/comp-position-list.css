@@ -1,0 +1,44 @@
+.position-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.position-list > li {
+  margin: 1.4rem 0 2rem;
+}
+
+.position-list h3 span {
+  color: #d95d69;
+}
+
+.position-list a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.position-list .company {
+  color: #fff;
+}
+
+.position-list a:hover {
+  display: block;
+  outline: 3px solid rgba(255, 255, 255, 0.2);
+  outline-offset: 1rem;
+}
+
+.position-list a:hover .company {
+  color: #fad19a;
+}
+
+.position-list h3,
+.position-list p {
+  margin: 0;
+}
+
+
+.position-list .start-end-date {
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}

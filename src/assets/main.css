@@ -1,0 +1,127 @@
+:root {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background: #11152c;
+  color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+a, a:visited, a:focus {
+  color: #aaa;
+}
+
+#Layout {
+  min-height: 100vh;
+}
+
+#Layout > main,
+#SiteHeader > nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#Layout > main {
+  padding: 3rem 2rem;
+}
+
+#Layout.home > main {
+  padding: 0;
+}
+
+#SiteHeader {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  border-bottom: 2px solid #fad19a;
+}
+
+#SiteHeader > nav {
+  height: 5.5rem;
+  padding: 2rem;
+  text-align: right;
+}
+
+.home #SiteHeader {
+  border: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+#SiteHeader a {
+  margin-left: 1.6rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  position: relative;
+  padding: 0.5rem 0.2rem;
+}
+
+#SiteHeader a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #fad19a;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+#SiteHeader a.active::before,
+#SiteHeader a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.social-icons svg {
+  opacity: 0.7;
+}
+
+.social-icons a:hover svg {
+  opacity: 1;
+}
+
+.button,
+.button:visited {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: #fad19a;
+  border: 2px solid #fad19a;
+  border-radius: 0.4rem;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+}
+
+.button:hover {
+  color: #11152c;
+  background-color: #fad19a;
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "id": 0,
+    "title": "Senior Frontend Engineer",
+    "company": "IBM ELM",
+    "startDate": "2022-09-01",
+    "description": "Currently, I work on the Requirements Management and Report Builder applications in our Engineering Lifecycle Management software suite. My primary focus is on redesigning and redeveloping our existing applications using React and the Carbon Design System, while also adding new features and maintaining the older versions of these products.",
+    "url": "https://www.ibm.com/products/engineering-lifecycle-management"
+  },
+  {
+    "id": 1,
+    "title": "Senior Frontend Engineer",
+    "company": "IBM Video Streaming",
+    "startDate": "2016-04-01",
+    "endDate": "2022-09-01",
+    "description": "After IBM acquired Ustream, our video streaming product transitioned from a consumer-facing platform to a SaaS enterprise solution. I worked on integrating our products into IBM's ecosystem, developing new dashboard features, and redesigning our legacy pages in React and the Carbon Design System. Collaborated daily with product, marketing, sales, and customer success teams while providing support to key customers.",
+    "url": "https://video.ibm.com"
+  },
+  {
+    "id": 2,
+    "title": "Senior Frontend Engineer",
+    "company": "Ustream",
+    "startDate": "2012-06-01",
+    "endDate": "2016-04-01",
+    "description": "I joined Ustream's San Francisco-based team to collaborate closely with the product, marketing, sales, and customer success teams, while leading our local developer team. I was also responsible for designing and developing MVPs for the sales engineering team and working on custom projects for our largest customers.",
+    "url": "https://web.archive.org/web/20151230001517/http://ustream.tv/"
+  },
+  {
+    "id": 3,
+    "title": "Frontend Engineer",
+    "company": "Ustream Hungary",
+    "startDate": "2010-03-01",
+    "endDate": "2012-06-01",
+    "description": "Completed multiple site-wide redesign projects and core product pages. As a Product Architect, I coordinated and led the development of our Facebook App and Open Graph integration. In 2010, I was rewarded with the Employee of the Year award.",
+    "url": "https://web.archive.org/web/20120724211440/http://www.ustream.tv/"
+  },
+  {
+    "id": 4,
+    "title": "Frontend Developer",
+    "company": "Carnation",
+    "startDate": "2008-12-01",
+    "endDate": "2010-03-01",
+    "description": "Built numerous web portals, newsletters, landing pages, and micro-sites. Successfully delivered projects for companies with the highest standards, including Procter & Gamble, E.ON, Telenor, Tesco, and Ringier.",
+    "url": "https://www.vml.com/hungary"
+  },
+  {
+    "id": 5,
+    "title": "Full Stack Developer",
+    "company": "Netrix",
+    "startDate": "2006-09-01",
+    "endDate": "2008-12-01",
+    "description": "Developed and maintained high-traffic websites based on the company's proprietary CMS. Designed and developed new modules within the existing CMS and established front-end coding standards for the company.",
+    "url": "https://netrixlabs.com/"
+  },
+  {
+    "id": 6,
+    "title": "Full Stack Developer",
+    "company": "Akakiko",
+    "startDate": "2005-09-01",
+    "endDate": "2006-09-01",
+    "description": "Developed the website's online credit card payment system, and designed and developed multiple internal web applications for monitoring orders, scheduling shifts, and exporting and analyzing order data.",
+    "url": "https://akakiko.at/"
+  }
+]

@@ -1,0 +1,29 @@
+#Layout.home {
+  background: url(/images/background-mountain-3840.png) no-repeat 50% 0 fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#Welcome {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin-top: -5.5rem;
+}
+
+#Welcome > div {
+  margin: 0 auto;
+  padding: 0 0 6rem;
+  text-align: center;
+}
+
+#Welcome h1 {
+  margin: 0 auto;
+  font-size: 4rem;
+}
+
+#Welcome p {
+  margin: 0 0 2rem;
+}

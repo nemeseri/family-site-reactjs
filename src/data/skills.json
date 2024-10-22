@@ -1,0 +1,23 @@
+[
+  { "id": 0, "name": "Javascript", "experience": 15 },
+  { "id": 1, "name": "React", "experience": 5 },
+  { "id": 2, "name": "TypeScript", "experience": 2 },
+  { "id": 3, "name": "ES6" },
+  { "id": 4, "name": "Next.js", "experience": 2 },
+  { "id": 5, "name": "Vite" },
+  { "id": 6, "name": "TanStack Router" },
+  { "id": 7, "name": "TanStack Query" },
+  { "id": 8, "name": "Zustland" },
+  { "id": 9, "name": "HTML5" },
+  { "id": 10, "name": "CSS3" },
+  { "id": 11, "name": "Sass" },
+  { "id": 12, "name": "Tailwind" },
+  { "id": 13, "name": "Radix" },
+  { "id": 14, "name": "PHP" },
+  { "id": 15, "name": "Node.js" },
+  { "id": 16, "name": "PostgreSQL" },
+  { "id": 17, "name": "Jest" },
+  { "id": 18, "name": "Playwright" },
+  { "id": 19, "name": "Wordpress" },
+  { "id": 20, "name": "Bootstrap" }
+]
