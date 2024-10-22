@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push: 
-    branches: [ main ]
+    branches: [ live ]
 
 jobs:
   build:
@@ -19,6 +19,6 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd /www/family-site-reactjs
-            git pull origin main
+            git pull origin live
             npm install
             npm run build
