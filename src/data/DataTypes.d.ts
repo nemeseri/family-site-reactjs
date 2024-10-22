@@ -1,3 +1,5 @@
+/// <reference types="vite/types/importMeta.d.ts" />
+
 type Skill = {
   id: number;
   name: string;
