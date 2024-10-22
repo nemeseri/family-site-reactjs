@@ -21,11 +21,55 @@
   height: auto;
 }
 
-/* .gallery .four-grid-cells {
-  grid-row: span 2 / auto;
-  grid-column: span 2 / auto;
+.street-photography dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, .8);
+  padding: 3rem;
 }
 
-.gallery .wide-image {
-  grid-column: span 2 / auto;
-}*/
+.street-photography dialog button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: block;
+  border-radius: 0.4rem;
+  border: 2px solid #fad19a;
+  color: #fad19a;
+}
+
+.street-photography dialog button::before {
+  content: 'X';
+  display: block;
+  text-align: center;
+  text-indent: 0;
+  line-height: 2.9rem;
+  color: #fad19a;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.street-photography dialog button:hover::before {
+  background-color: #fad19a;
+  color: #000;
+}
+
+.street-photography dialog img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 100%;
+  width: auto;
+}

@@ -13,10 +13,6 @@ type FlickrImgInSet = {
   largeUrl: string;
 }
 
-type FlickrImgProps = FlickrImgInSet & {
-  handleClick: () => void;
-}
-
 function StreetPhotography() {
   const [photos, setPhotos] = useState<FlickrImgInSet[]>([]);
   const [activePhoto, setActivePhoto] = useState<FlickrImgInSet | null>(null);
@@ -30,20 +26,24 @@ function StreetPhotography() {
   return (
     <>
       <div className='gallery'>
-        {[...Array(4).keys()].map((i) => {
+        {[...Array(4).keys()].map((k) => {
           return (
-            <div className='col' key={i}>
+            <div className='col' key={k}>
               {photos.map((p, idx) => {
-                if (idx % 4 === i) 
+                if (idx % 4 === k) 
                   return <FlickrImg key={p.id} handleClick={() => setActivePhoto(p)} {...p} />;
               })}
             </div>
           );
         })}
       </div>
-      <GalleryDialog photo={activePhoto}  />
+      <GalleryDialog photo={activePhoto} handleClose={() => setActivePhoto(null)}  />
     </>
   );
+}
+
+type FlickrImgProps = FlickrImgInSet & {
+  handleClick: () => void;
 }
 
 function FlickrImg({ id, title, thumbUrl, largeUrl, handleClick }: FlickrImgProps) {
@@ -58,15 +58,21 @@ function FlickrImg({ id, title, thumbUrl, largeUrl, handleClick }: FlickrImgProp
     </a>;
 }
 
-function GalleryDialog({ photo }: { photo: FlickrImgInSet | null }) {
+type GalleryDialogProps = {
+  photo: FlickrImgInSet | null;
+  handleClose: () => void;
+}
+
+function GalleryDialog({ photo, handleClose }: GalleryDialogProps) {
   let dialogAttr: { open?: boolean } = {};
   if (photo !== null) {
     dialogAttr.open = true;
   }
 
   return (
-    <dialog {...dialogAttr}>
-      {photo && <img src={photo.largeUrl} alt={photo.title} />}
+    <dialog {...dialogAttr} onClick={handleClose}>
+      <button onClick={handleClose}>Close</button>
+      {photo && <img src={photo.largeUrl} alt={photo.title} onClick={(e) => {e.stopPropagation()}}/>}
     </dialog>
   );
 }
