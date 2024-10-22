@@ -36,8 +36,8 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   padding: 0;
   background: none;
   border: 0;
@@ -45,8 +45,8 @@
   text-indent: -9999px;
   overflow: hidden;
   display: block;
-  border-radius: 0.4rem;
-  border: 2px solid #fad19a;
+  border-radius: 0.6rem;
+  border: 2px solid rgba(250, 209, 154, .7);
   color: #fad19a;
 }
 
@@ -55,14 +55,13 @@
   display: block;
   text-align: center;
   text-indent: 0;
-  line-height: 2.9rem;
+  line-height: 2.4rem;
   color: #fad19a;
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .street-photography dialog button:hover::before {
-  background-color: #fad19a;
+  background-color: rgba(250, 209, 154, .7);
   color: #000;
 }
 

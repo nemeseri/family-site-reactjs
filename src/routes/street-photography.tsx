@@ -16,17 +16,30 @@ type FlickrImgInSet = {
 function StreetPhotography() {
   const [photos, setPhotos] = useState<FlickrImgInSet[]>([]);
   const [activePhoto, setActivePhoto] = useState<FlickrImgInSet | null>(null);
+  const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
-    fetch('http://localhost:3000/flickr/get-street')
-      .then(r => r.json())
-      .then(d => setPhotos(d));
+    async function getFlickrPhotos() {
+      try {
+        const response = await fetch('http://localhost:3000/flickr/get-street');
+        if (!response.ok) {
+          throw new Error(`Can't reach server API.`);
+        }
+        const data = await response.json();
+        setPhotos(data);
+      } catch (err) {
+        setPhotos([]);
+        setError(true);
+      }
+    }
+    getFlickrPhotos();
   }, []);
 
   return (
     <>
       <div className='gallery'>
-        {[...Array(4).keys()].map((k) => {
+        {error === true && <h4 className='flickr-error'>Can't reach the server API.<br />Please try again later.</h4>}
+        {photos.length > 0 && [...Array(4).keys()].map((k) => {
           return (
             <div className='col' key={k}>
               {photos.map((p, idx) => {
@@ -71,7 +84,7 @@ function GalleryDialog({ photo, handleClose }: GalleryDialogProps) {
 
   return (
     <dialog {...dialogAttr} onClick={handleClose}>
-      <button onClick={handleClose}>Close</button>
+      <button>Close</button>
       {photo && <img src={photo.largeUrl} alt={photo.title} onClick={(e) => {e.stopPropagation()}}/>}
     </dialog>
   );
