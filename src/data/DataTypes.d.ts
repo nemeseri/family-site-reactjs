@@ -13,3 +13,10 @@ type Position = {
   description: string;
   url?: string;
 }
+
+type FlickrImgInSet = {
+  id: number;
+  title: string;
+  thumbUrl: string;
+  largeUrl: string;
+}
