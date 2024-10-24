@@ -11,27 +11,26 @@ export const Route = createFileRoute('/street-photography')({
 
 const API_URL = import.meta.env.VITE_API_URL;
 
+async function fetchPhotos() {
+  const response = await fetch(API_URL.concat('/flickr/get-street'));
+  if (!response.ok) {
+    throw new Error(`Can't reach server API.`);
+  }
+  return response.json();
+}
+
 function StreetPhotography() {
   const [photos, setPhotos] = useState<FlickrImgInSet[]>([]);
   const [activePhoto, setActivePhoto] = useState<FlickrImgInSet | null>(null);
   const [error, setError] = useState<boolean>(false);
-  const getPhotosUrl = API_URL.concat('/flickr/get-street');
 
   useEffect(() => {
-    async function getFlickrPhotos() {
-      try {
-        const response = await fetch(getPhotosUrl);
-        if (!response.ok) {
-          throw new Error(`Can't reach server API.`);
-        }
-        const data = await response.json();
-        setPhotos(data);
-      } catch (err) {
-        setPhotos([]);
-        setError(true);
-      }
+    try {
+      fetchPhotos().then(data => setPhotos(data));
+    } catch (err) {
+      setPhotos([]);
+      setError(true);
     }
-    getFlickrPhotos();
   }, []);
 
   return (

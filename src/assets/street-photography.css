@@ -48,8 +48,8 @@
   overflow: hidden;
   display: block;
   border-radius: 0.6rem;
-  border: 2px solid rgba(250, 209, 154, .7);
-  color: #fad19a;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 .street-photography dialog button::before {
@@ -58,12 +58,12 @@
   text-align: center;
   text-indent: 0;
   line-height: 2.4rem;
-  color: #fad19a;
+  color: #fff;
   font-size: 1.2rem;
 }
 
 .street-photography dialog button:hover::before {
-  background-color: rgba(250, 209, 154, .7);
+  background-color: #fff;
   color: #000;
 }
 

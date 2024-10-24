@@ -1,0 +1,64 @@
+.family-photos {
+  background-color: #3b6da2;
+  background-image: -webkit-linear-gradient(263deg, rgba(255, 255, 255, 0.2) 0%, #000000 100%), -webkit-linear-gradient(18deg, rgba(255, 255, 255, 0.25) 25%, rgba(0, 0, 0, 0.25) 100%), -webkit-radial-gradient(47% 102%, rgba(255, 255, 255, 0.5) 0%, rgba(21, 24, 32, 0.6) 120%);
+  background-image: linear-gradient(-173deg, rgba(255, 255, 255, 0.2) 0%, #000000 100%), linear-gradient(72deg, rgba(255, 255, 255, 0.25) 25%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(47% 102%, rgba(255, 255, 255, 0.5) 0%, rgba(21, 24, 32, 0.6) 120%);
+  background-blend-mode: multiply;
+}
+
+.family-photos main {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.family-photos form {
+  width: 30vw;
+  background-color: #fff;
+  box-shadow: rgba(9, 11, 17, 0.05) 0px 5px 15px 0px, rgba(19, 23, 32, 0.05) 0px 15px 35px -5px;
+  border-radius: 8px;
+  color: #47536b;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.family-photos h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.family-photos label {
+  display: block;
+}
+
+.family-photos input {
+  display: block;
+  background: #fcfcfc;
+  border: 1px solid rgba(194, 201, 214, 0.4);
+  border-radius: 8px;
+  height: 36px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  color: #0b0e14;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.family-photos input:hover {
+  border-color: #94a0b8;
+}
+
+.family-photos button {
+  background-color: #05070a;
+  border: 0;
+  color: #fff;
+  padding: 8px 24px;
+  height: 36px;
+  display: block;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.family-photos button:hover {
+  background-color: #333c4d;
+}
