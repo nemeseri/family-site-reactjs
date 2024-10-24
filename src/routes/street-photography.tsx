@@ -25,12 +25,12 @@ function StreetPhotography() {
   const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
-    try {
-      fetchPhotos().then(data => setPhotos(data));
-    } catch (err) {
-      setPhotos([]);
-      setError(true);
-    }
+    fetchPhotos()
+      .then(data => setPhotos(data))
+      .catch(err => {
+        setPhotos([]);
+        setError(true);
+      });
   }, []);
 
   return (

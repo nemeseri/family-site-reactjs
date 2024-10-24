@@ -74,6 +74,7 @@ a, a:visited, a:focus {
   color: #fff;
   position: relative;
   padding: 0.5rem 0.2rem;
+  cursor: pointer;
 }
 
 #SiteHeader a::before {
@@ -88,6 +89,11 @@ a, a:visited, a:focus {
   transform-origin: right;
   transform: scaleX(0);
   transition: transform .3s ease-in-out;
+}
+
+#SiteHeader a.disabled {
+  cursor: default;
+  opacity: 0.6;
 }
 
 #SiteHeader a.active::before,
