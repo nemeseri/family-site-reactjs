@@ -7,6 +7,11 @@ import '../assets/street-photography.css'
 
 export const Route = createFileRoute('/street-photography')({
   component: StreetPhotography,
+  meta: () => [
+    {
+      title: "Street Photography | Andras Nemeseri - Web Developer",
+    },
+  ],
 })
 
 const API_URL = import.meta.env.VITE_API_URL;

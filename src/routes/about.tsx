@@ -8,6 +8,11 @@ import positions from '../data/positions.json'
 
 export const Route = createFileRoute('/about')({
   component: About,
+  meta: () => [
+    {
+      title: "About | Andras Nemeseri - Web Developer",
+    },
+  ],
 })
 
 function About() {

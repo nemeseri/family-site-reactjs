@@ -3,6 +3,11 @@ import '../assets/family-photos.css';
 
 export const Route = createFileRoute('/family-photos')({
   component: FamilyPhotos,
+  meta: () => [
+    {
+      title: "Family Photos | Andras Nemeseri - Web Developer",
+    },
+  ],
 })
 
 function FamilyPhotos() {
