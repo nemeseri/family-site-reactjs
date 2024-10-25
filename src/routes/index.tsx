@@ -12,8 +12,8 @@ function Home() {
       <div>
         <h1>Hi, I'm Andras.</h1>
         <p>
-          I'm a full-stack web developer,<br className='display-on-mobile' />
-          based in<br className='display-on-tablet'/>
+          I'm a full-stack web developer, <br className='display-on-mobile' />
+          based in <br className='display-on-tablet'/>
           San Francisco, CA.
         </p>
         <footer>

@@ -79,3 +79,13 @@
   max-height: 100%;
   width: auto;
 }
+
+@media only screen and (max-width: 767px) {
+  .gallery {
+    flex-wrap: wrap;
+  }
+
+  .gallery .col {
+    width: 48%;
+  }
+}

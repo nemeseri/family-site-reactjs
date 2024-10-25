@@ -62,13 +62,13 @@
   margin: 0
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   #AboutSidebar h1 {
     font-size: 1.8rem;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   #Layout.about main {
     display: block;
     padding-bottom: 150px;
@@ -88,5 +88,4 @@
   #AboutExperience h2 {
     margin: 2rem 0 0;
   }
-  
 }
