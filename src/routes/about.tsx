@@ -44,12 +44,12 @@ function About() {
             </a>
           </p>
         </section>
-        <section>
+        <footer>
           <a href="/resume.pdf" className="button" target="_blank">
             Download Resume
           </a>
           <SocialIcons />
-        </section>
+        </footer>
       </div>
       <section id="AboutExperience">
         <h2>Experience</h2>

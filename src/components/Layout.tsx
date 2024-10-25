@@ -14,7 +14,7 @@ export default function Layout({ children }: LayoutProps) {
           <nav>
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
-              <Link to="/street-photography">Street Photography</Link>
+              <Link to="/street-photography">Street Photography</Link><br className='display-under-620' />
               <Link to="/family-photos">Family Photos</Link>
               {/* todo: add email form */}
               <EmailLink>Contact</EmailLink>

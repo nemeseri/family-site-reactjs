@@ -61,3 +61,32 @@
 #AboutExperience h2 {
   margin: 0
 }
+
+@media only screen and (max-width: 1024px) {
+  #AboutSidebar h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #Layout.about main {
+    display: block;
+    padding-bottom: 150px;
+  }
+
+  #AboutSidebar,
+  #AboutExperience {
+    width: auto;
+    padding: 0;
+  }
+
+  .about footer {
+    position: absolute;
+    bottom: 1rem;
+  }
+
+  #AboutExperience h2 {
+    margin: 2rem 0 0;
+  }
+  
+}

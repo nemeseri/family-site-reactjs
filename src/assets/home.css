@@ -15,7 +15,7 @@
 
 #Welcome > div {
   margin: 0 auto;
-  padding: 0 0 6rem;
+  padding: 0 2rem 6rem;
   text-align: center;
 }
 
@@ -26,4 +26,16 @@
 
 #Welcome p {
   margin: 0 0 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  #Welcome h1 {
+    font-size: 3rem;
+  } 
+}
+
+@media only screen and (max-width: 480px) {
+  #Welcome h1 {
+    font-size: 2.3rem;
+  }
 }

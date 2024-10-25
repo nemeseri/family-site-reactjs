@@ -57,7 +57,7 @@ a, a:visited, a:focus {
 
 #SiteHeader > nav {
   height: 5.5rem;
-  padding: 2rem;
+  padding: 1.5rem 2rem;
   text-align: right;
 }
 
@@ -68,6 +68,7 @@ a, a:visited, a:focus {
 }
 
 #SiteHeader a {
+  display: inline-block;
   margin-left: 1.6rem;
   text-decoration: none;
   font-weight: 600;
@@ -75,6 +76,10 @@ a, a:visited, a:focus {
   position: relative;
   padding: 0.5rem 0.2rem;
   cursor: pointer;
+}
+
+#SiteHeader a:first-child {
+  margin-left: 0;
 }
 
 #SiteHeader a::before {
@@ -130,4 +135,52 @@ a, a:visited, a:focus {
 .button:hover {
   color: #11152c;
   background-color: #fad19a;
+}
+
+.display-on-tablet,
+.display-on-mobile,
+.display-under-620 {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .display-on-tablet {
+    display: block;
+  }
+
+  #SiteHeader {
+    position: relative;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  #SiteHeader > nav {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+}
+
+@media only screen and (max-width: 620px) {
+  #SiteHeader > nav {
+    padding: 0.25rem 1.5rem;
+  }
+
+  .display-under-620 {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .display-on-tablet {
+    display: none;
+  }
+
+  .display-on-mobile {
+    display: block;
+  }
+
+  #SiteHeader > nav {
+    padding: 0.25rem;
+  }
 }
