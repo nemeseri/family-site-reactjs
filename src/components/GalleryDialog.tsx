@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 
 type GalleryDialogProps = {
   photo: FlickrImgInSet | null;
@@ -7,6 +7,7 @@ type GalleryDialogProps = {
 }
 
 export default function GalleryDialog({ photo, handleClose, handleKeys }: GalleryDialogProps) {
+  const [isLoading, setIsLoading] = useState(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const isOpen = !!photo;
 
@@ -17,10 +18,23 @@ export default function GalleryDialog({ photo, handleClose, handleKeys }: Galler
       dialogRef.current?.close();
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    setIsLoading(true);
+  }, [photo]);
+
   return (
-    <dialog onClick={handleClose} onKeyDown={handleKeys} ref={dialogRef}>
+    <dialog onClick={handleClose} onKeyDown={handleKeys} ref={dialogRef} className={isLoading ? 'loading' : ''}>
       <button>Close</button>
-      {photo && <img src={photo.largeUrl} alt={photo.title} title={photo.title} onClick={(e) => {e.stopPropagation()}}/>}
+      <div className='img-skeleton'></div>
+      {photo && 
+        <img src={photo.largeUrl} 
+          key={photo.id} 
+          alt={photo.title} 
+          title={photo.title} 
+          onClick={(e) => e.stopPropagation()}
+          onLoad={() => setIsLoading(false)}
+      />}
     </dialog>
   );
 }
