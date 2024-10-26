@@ -40,6 +40,10 @@
   #Welcome h1 {
     font-size: 3rem;
   } 
+
+  #Welcome {
+    margin-top: -112px;
+  }
 }
 
 @media only screen and (max-width: 479px) {
