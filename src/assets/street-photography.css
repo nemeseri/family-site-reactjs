@@ -34,17 +34,22 @@
   max-height: none;
 }
 
-.street-photography dialog .img-skeleton {
+.street-photography .loading .loader {
   display: none;
-  aspect-ratio: 3/4;
-  width: auto;
-  height: 100%;
-  background: #eee;
+  width: 20px;
   margin: 0 auto;
-  opacity: 0.4;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+}
+@keyframes l5 {
+    0%  {box-shadow: 25px 0 #fff, -25px 0 #fff2;background: #fff }
+    33% {box-shadow: 25px 0 #fff, -25px 0 #fff2;background: #fff2}
+    66% {box-shadow: 25px 0 #fff2,-25px 0 #fff; background: #fff2}
+    100%{box-shadow: 25px 0 #fff2,-25px 0 #fff; background: #fff }
 }
 
-.street-photography dialog.loading .img-skeleton {
+.street-photography .loading .loader {
   display: block;
 }
 
