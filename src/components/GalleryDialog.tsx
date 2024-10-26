@@ -20,7 +20,7 @@ export default function GalleryDialog({ photo, handleClose, handleKeys }: Galler
   return (
     <dialog onClick={handleClose} onKeyDown={handleKeys} ref={dialogRef}>
       <button>Close</button>
-      {photo && <img src={photo.largeUrl} alt={photo.title} onClick={(e) => {e.stopPropagation()}}/>}
+      {photo && <img src={photo.largeUrl} alt={photo.title} title={photo.title} onClick={(e) => {e.stopPropagation()}}/>}
     </dialog>
   );
 }
