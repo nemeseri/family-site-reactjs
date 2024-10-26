@@ -5,6 +5,7 @@ type FlickrImgProps = FlickrImgInSet & {
 export default function FlickrImg({ title, thumbUrl, largeUrl, handleClick }: FlickrImgProps) {
   return <a 
     target='_blank'
+    title={title}
     href={largeUrl} 
     onClick={(e) => {
       e.preventDefault();
