@@ -39,9 +39,8 @@ function StreetPhotography() {
   }, []);
 
   function handleKeys(e: React.KeyboardEvent<HTMLDialogElement>) {
-    e.preventDefault();
-
     if (e.key === 'Escape') {
+      e.preventDefault();
       setActivePhoto(null);
     } else if (e.key === 'ArrowRight') {
       showNextPhoto();
