@@ -157,4 +157,8 @@
   .street-photography dialog .right-arrow {
     display: none;
   }
+
+  .street-photography dialog {
+    padding: 3rem;
+  }
 }
