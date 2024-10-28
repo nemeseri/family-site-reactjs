@@ -38,18 +38,7 @@ function StreetPhotography() {
       });
   }, []);
 
-  function handleKeys(e: React.KeyboardEvent<HTMLDialogElement>) {
-    if (e.key === 'Escape') {
-      e.preventDefault();
-      setActivePhoto(null);
-    } else if (e.key === 'ArrowRight') {
-      showNextPhoto();
-    } else if (e.key === 'ArrowLeft') {
-      showPrevPhoto();
-    }
-  }
-
-  function showNextPhoto() {
+  function nextPhoto() {
     const currentIdx = activePhoto ? photos.indexOf(activePhoto) : null;
     if (currentIdx !== null) {
       const targetIdx = currentIdx === photos.length - 1 ? 0 : currentIdx+1;
@@ -57,10 +46,10 @@ function StreetPhotography() {
     }
   }
 
-  function showPrevPhoto() {
+  function previousPhoto() {
     const currentIdx = activePhoto ? photos.indexOf(activePhoto) : null;
     if (currentIdx !== null) {
-      const targetIdx = currentIdx === photos.length - 1 ? 0 : currentIdx+1;
+      const targetIdx = currentIdx === photos.length - 1 ? 0 : currentIdx-1;
       setActivePhoto(photos[targetIdx]);
     }
   }
@@ -83,7 +72,8 @@ function StreetPhotography() {
       <GalleryDialog 
         photo={activePhoto} 
         handleClose={() => setActivePhoto(null)}
-        handleKeys={handleKeys}  />
+        handleNext={nextPhoto}
+        handlePrevious={previousPhoto}  />
     </>
   );
 }
