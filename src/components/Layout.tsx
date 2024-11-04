@@ -1,5 +1,6 @@
 import { Link, useRouterState } from '@tanstack/react-router';
 import EmailLink from './EmailLink';
+import { useEffect, useState } from 'react';
 
 type LayoutProps = {
   children: React.ReactElement;
@@ -7,6 +8,17 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   const router = useRouterState();
+  const [attribVisible, setAttribVisible] = useState(false);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setAttribVisible(true);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    }
+  }, []);
 
   return (
     <>
@@ -25,7 +37,7 @@ export default function Layout({ children }: LayoutProps) {
             {children}
         </main>
       </div>
-      {!router.location.href.slice(1) && 
+      {!router.location.href.slice(1) && attribVisible && 
         <a href='https://vecteezy.com' target='_blank' id='Attribution' title='Background image downloaded from Vecteezy.com'>Vecteezy.com</a>}
     </>
   );
